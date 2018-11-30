@@ -330,12 +330,8 @@ public class ClienteBD {
     
     
     public static void abrir() throws SQLException{
-        try{
+        
         conexion = DriverManager.getConnection(URL, usuBD, contrasenaBD);
-            System.out.println("Correcto");
-        } catch (Exception e){
-            System.out.println(e.getMessage());
-        }
     }
     
     public void cerrar() throws SQLException{

@@ -64,31 +64,26 @@ public class Login extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
-        String paginaRespuesta = "login.jsp";
-        String mensaje = "";
+        String paginaRespuesta = "Login.jsp";
 
         // Recibir los valores del formulario
-        try{
+        
         String nombre = request.getParameter("User");
         String contrasena = request.getParameter("Con");
             System.out.println("Éxito");
-        } catch (Exception e){
-            System.out.println(e.getMessage());
-        }
 
         Cliente c = null;
         ClienteBD uDB = new ClienteBD();
 
         // Buscar al usuario en la base de datos
-        /*try {
+        try {
             uDB.abrir();
             c = uDB.buscar(nombre, contrasena);
             uDB.cerrar();
             System.out.println(c.getTipo());
             // Si son sus credenciales
             if (c == null) {
-                mensaje = "Cliente o contraseña inválidos";
-                request.setAttribute("mensaje", mensaje);
+                System.out.println("Cliente o contraseña inválidos");
             } else {
                 if (c.getTipo().contains("A")) {
                     // Es administrador
@@ -99,10 +94,8 @@ public class Login extends HttpServlet {
                     Cookie userName = new Cookie("user", nombre);
                     userName.setMaxAge(30 * 60);
                     response.addCookie(userName);
-                    
                     //response.sendRedirect("LoginExitoso.jsp");
 
-                    paginaRespuesta = "Catalogo.jsp";//Pagina a las que se le mandara
                 } if(c.getTipo().contains("C")){
                     //Es solo un vendedor
                     
@@ -129,13 +122,11 @@ public class Login extends HttpServlet {
                 }
             }
         } catch (SQLException ex) {
-            mensaje = ex.getMessage();
-            request.setAttribute("mensaje", mensaje);
         }
 
         RequestDispatcher dispatcher
                 = request.getRequestDispatcher(paginaRespuesta);
-        dispatcher.forward(request, response);*/
+        dispatcher.forward(request, response);
     
     }
 

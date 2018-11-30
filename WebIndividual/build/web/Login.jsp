@@ -69,7 +69,7 @@
   
   <!-- Espacio de inicio-->
 	<form action="Login" method="post">
-	
+	<input type="hidden" name="accion" value="insertar"/>
 	<div class="container">
 	<div class="row main">
 	<div class="main-login main-center">
