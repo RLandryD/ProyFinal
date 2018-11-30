@@ -54,7 +54,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i></a></li>
                     <li class="active"><a href="Catalogo.jsp"><i class="fas fa-book" aria-hidden="true"></i></a></li>
-                    <li><a href="http://localhost/9no/P%20individual/Form%20perfil.html"><i class="fas fa-user" aria-hidden="true"></i></a></li>
+                    <li><a href="Form perfil.jsp"><i class="fas fa-user" aria-hidden="true"></i></a></li>
 
 
                 </ul>
