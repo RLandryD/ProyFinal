@@ -22,24 +22,24 @@
         <servlet-class>ControlCliente.LibrosC</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>UsuariosC</servlet-name>
-        <servlet-class>ControlCliente.UsuariosC</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>ModlibrosA</servlet-name>
-        <servlet-class>ControlCliente.ModlibrosA</servlet-class>
+        <servlet-class>ControlAdmin.ModlibrosA</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>AltaLibrosA</servlet-name>
-        <servlet-class>ControlCliente.AltaLibrosA</servlet-class>
+        <servlet-class>ControlAdmin.AltaLibrosA</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>BajaLibrosA</servlet-name>
-        <servlet-class>ControlCliente.BajaLibrosA</servlet-class>
+        <servlet-class>ControlAdmin.BajaLibrosA</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Logon</servlet-name>
         <servlet-class>ControlAdmin.Logon</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Vender</servlet-name>
+        <servlet-class>ControlCliente.Vender</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
@@ -58,10 +58,6 @@
         <url-pattern>/LibrosC</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>UsuariosC</servlet-name>
-        <url-pattern>/UsuariosC</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>ModlibrosA</servlet-name>
         <url-pattern>/ModlibrosA</url-pattern>
     </servlet-mapping>
@@ -76,6 +72,10 @@
     <servlet-mapping>
         <servlet-name>Logon</servlet-name>
         <url-pattern>/Logon</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Vender</servlet-name>
+        <url-pattern>/Vender</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

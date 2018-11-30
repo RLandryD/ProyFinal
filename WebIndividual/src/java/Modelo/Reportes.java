@@ -6,7 +6,6 @@
 package Modelo;
 
 import java.io.Serializable;
-import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,8 +13,6 @@ import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -28,45 +25,62 @@ import javax.xml.bind.annotation.XmlRootElement;
 @NamedQueries({
     @NamedQuery(name = "Reportes.findAll", query = "SELECT r FROM Reportes r")
     , @NamedQuery(name = "Reportes.findByMes", query = "SELECT r FROM Reportes r WHERE r.mes = :mes")
-    , @NamedQuery(name = "Reportes.findByIdLibro", query = "SELECT r FROM Reportes r WHERE r.idLibro = :idLibro")})
+    , @NamedQuery(name = "Reportes.findByLibro", query = "SELECT r FROM Reportes r WHERE r.libro = :libro")
+    , @NamedQuery(name = "Reportes.findByCantidad", query = "SELECT r FROM Reportes r WHERE r.cantidad = :cantidad")})
 public class Reportes implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
     @Column(name = "mes")
-    @Temporal(TemporalType.DATE)
-    private Date mes;
+    private Integer mes;
     @Basic(optional = false)
-    @Column(name = "Id_Libro")
-    private String idLibro;
+    @Column(name = "Libro")
+    private String libro;
+    @Basic(optional = false)
+    @Column(name = "cantidad")
+    private int cantidad;
 
     public Reportes() {
     }
 
-    public Reportes(Date mes) {
+    public Reportes(Integer mes) {
         this.mes = mes;
     }
-
-    public Reportes(Date mes, String idLibro) {
+    
+    public Reportes(Integer mes, String tit) {
         this.mes = mes;
-        this.idLibro = idLibro;
+        this.libro = tit;
     }
 
-    public Date getMes() {
+    public Reportes(Integer mes, String libro, int cantidad) {
+        this.mes = mes;
+        this.libro = libro;
+        this.cantidad = cantidad;
+    }
+
+    public Integer getMes() {
         return mes;
     }
 
-    public void setMes(Date mes) {
+    public void setMes(Integer mes) {
         this.mes = mes;
     }
 
-    public String getIdLibro() {
-        return idLibro;
+    public String getLibro() {
+        return libro;
     }
 
-    public void setIdLibro(String idLibro) {
-        this.idLibro = idLibro;
+    public void setLibro(String libro) {
+        this.libro = libro;
+    }
+
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
     }
 
     @Override

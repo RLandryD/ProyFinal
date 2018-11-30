@@ -5,11 +5,10 @@
  */
 package Controladores;
 
-import Controladores.exceptions.NonexistentEntityException;
-import Controladores.exceptions.PreexistingEntityException;
+import ControlAdmin.exceptions.NonexistentEntityException;
+import ControlAdmin.exceptions.PreexistingEntityException;
 import Modelo.Reportes;
 import java.io.Serializable;
-import java.util.Date;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -62,7 +61,7 @@ public class ReportesJpaController implements Serializable {
         } catch (Exception ex) {
             String msg = ex.getLocalizedMessage();
             if (msg == null || msg.length() == 0) {
-                Date id = reportes.getMes();
+                Integer id = reportes.getMes();
                 if (findReportes(id) == null) {
                     throw new NonexistentEntityException("The reportes with id " + id + " no longer exists.");
                 }
@@ -75,7 +74,7 @@ public class ReportesJpaController implements Serializable {
         }
     }
 
-    public void destroy(Date id) throws NonexistentEntityException {
+    public void destroy(Integer id) throws NonexistentEntityException {
         EntityManager em = null;
         try {
             em = getEntityManager();
@@ -120,7 +119,7 @@ public class ReportesJpaController implements Serializable {
         }
     }
 
-    public Reportes findReportes(Date id) {
+    public Reportes findReportes(Integer id) {
         EntityManager em = getEntityManager();
         try {
             return em.find(Reportes.class, id);
@@ -129,6 +128,14 @@ public class ReportesJpaController implements Serializable {
         }
     }
 
+    public Reportes findReportes(String tit) {
+        EntityManager em = getEntityManager();
+        try {
+            return em.find(Reportes.class, tit);
+        } finally {
+            em.close();
+        }
+    }
     public int getReportesCount() {
         EntityManager em = getEntityManager();
         try {

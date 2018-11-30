@@ -10,6 +10,8 @@ import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
@@ -37,6 +39,7 @@ public class Ventas implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "No_Venta")
     private Integer noVenta;
@@ -55,7 +58,7 @@ public class Ventas implements Serializable {
     private int cantidad;
     @Basic(optional = false)
     @Column(name = "Total")
-    private int total;
+    private float total;
 
     public Ventas() {
     }
@@ -64,8 +67,7 @@ public class Ventas implements Serializable {
         this.noVenta = noVenta;
     }
 
-    public Ventas(Integer noVenta, String usuario, int idLibro, Date fecha, int cantidad, int total) {
-        this.noVenta = noVenta;
+    public Ventas(String usuario, int idLibro, Date fecha, int cantidad, float total) {
         this.usuario = usuario;
         this.idLibro = idLibro;
         this.fecha = fecha;
@@ -113,11 +115,11 @@ public class Ventas implements Serializable {
         this.cantidad = cantidad;
     }
 
-    public int getTotal() {
+    public float getTotal() {
         return total;
     }
 
-    public void setTotal(int total) {
+    public void setTotal(float total) {
         this.total = total;
     }
 

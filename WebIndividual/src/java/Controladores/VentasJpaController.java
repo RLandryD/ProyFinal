@@ -5,8 +5,7 @@
  */
 package Controladores;
 
-import Controladores.exceptions.NonexistentEntityException;
-import Controladores.exceptions.PreexistingEntityException;
+import ControlAdmin.exceptions.NonexistentEntityException;
 import Modelo.Ventas;
 import java.io.Serializable;
 import java.util.List;
@@ -32,18 +31,13 @@ public class VentasJpaController implements Serializable {
         return emf.createEntityManager();
     }
 
-    public void create(Ventas ventas) throws PreexistingEntityException, Exception {
+    public void create(Ventas ventas) {
         EntityManager em = null;
         try {
             em = getEntityManager();
             em.getTransaction().begin();
             em.persist(ventas);
             em.getTransaction().commit();
-        } catch (Exception ex) {
-            if (findVentas(ventas.getNoVenta()) != null) {
-                throw new PreexistingEntityException("Ventas " + ventas + " already exists.", ex);
-            }
-            throw ex;
         } finally {
             if (em != null) {
                 em.close();

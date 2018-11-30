@@ -57,7 +57,6 @@
                     <li><a href="Carrito.jsp"><i class="fas fa-shopping-cart" aria-hidden="true"></i></a></li>
                     <li><a href="http://localhost/9no/P%20individual/Form%20perfil.html"><i class="fas fa-user" aria-hidden="true"></i></a></li>
                     <li><a href="Reporte.jsp"><i class="fas fa-file-invoice" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fas fa-truck" aria-hidden="true"></i></a></li>
 
                 </ul>
             </div><!-- /.navbar-collapse -->

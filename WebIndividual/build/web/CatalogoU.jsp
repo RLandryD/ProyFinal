@@ -54,9 +54,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i></a></li>
                     <li class="active"><a href="Catalogo.jsp"><i class="fas fa-book" aria-hidden="true"></i></a></li>
-                    <li><a href="Carrito.jsp"><i class="fas fa-shopping-cart" aria-hidden="true"></i></a></li>
                     <li><a href="http://localhost/9no/P%20individual/Form%20perfil.html"><i class="fas fa-user" aria-hidden="true"></i></a></li>
-                    <li><a href="Reporte.jsp"><i class="fas fa-file-invoice" aria-hidden="true"></i></a></li>
 
 
                 </ul>
@@ -67,109 +65,100 @@
 
     <br/><br/><br/><br/>
     <body>
-        <form action="Comprar.jsp">
-        <center>
-            <a href ="Form libroA.jsp"> Agregar </a><br/>
-            <a href = "Mod libroA.jsp"> Modificar </a><br/>
-            <a href = "Baja libroA.jsp"> Dar de baja </a><br/>
-            <a href ="Alta libroA.jsp"> Recuperar libros </a><br>
-        
         <!-- Productos más vendidos -->
-        <div align="center">
-            <div class="container">
-                <div class="row">
-                    <h2>Productos más comprados</h2>
-                </div>
-
-                <div class="row">
-                    <div class='col-md-8'>
-                        <div class="carousel slide media-carousel" id="media">
-                            <div class="carousel-inner">
-                                <div class="item  active">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class = "thumbnail">
-                                                <a href = "#"><img src = "img/El principito.jpg" alt = "Compra más" style = "width:150px; height:225px;"/></a>
-                                                <div class = "caption">
-                                                    <h5>El principito</h5>
-                                                    <h4><a class = "btn" href = "#"> Ver</a>
-                                                        <span class = "pull-right">$200</span>
-                                                    </h4>
-                                                </div>
+        
+        <div class="container">
+            <div class="row">
+                <h2>Productos más comprados</h2>
+            </div>
+            <div class="row">
+                <div class='col-md-8'>
+                    <div class="carousel slide media-carousel" id="media">
+                        <div class="carousel-inner">
+                            <div class="item  active">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class = "thumbnail">
+                                            <a href = "#"><img src = "img/El principito.jpg" alt = "Compra más" style = "width:150px; height:225px;"/></a>
+                                            <div class = "caption">
+                                                <h5>El principito</h5>
+                                                <h4><a class = "btn" href = "#"> Ver</a>
+                                                    <span class = "pull-right">$200</span>
+                                                </h4>
                                             </div>
                                         </div>
-
-                                        <div class = "col-md-4">
-                                            <div class = "thumbnail">
-                                                <a href = "#"><img src = "img/Digital Image Processing.jpg" alt = "Compra más" style = "width:150px; height:225px;"/>
-                                                </a>
-                                                <div class = "caption">
-                                                    <h5>Digital Image Processing</h5>
-                                                    <h4><a class = "btn" href = "#"> Ver</a>
-                                                        <span class = "pull-right">$250</span>
-                                                    </h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class = "col-md-4">
-                                            <div class = "thumbnail">
-                                                <a href = "#"><img src = "img/Alicia en el pais de las maravillas.jpg" alt = "Compra más" style = "width:150px; height:225px;"/>
-                                                </a>
-                                                <div class = "caption">
-                                                    <h5>Alicia en el pais de las maravillas</h5>
-                                                    <h4><a class = "btn" href = "#"> Ver</a>
-                                                        <span class = "pull-right">$250</span>
-                                                    </h4>
-                                                </div>
-                                            </div>
-                                        </div>
-
                                     </div>
-                                </div>
-                                <div class = "item">
-                                    <div class = "row">
-                                        <div class = "col-md-4">
-                                            <div class = "thumbnail">
 
-                                                <a href = "#"><img src = "img/El senor de los anillos.jpg" alt = "Compra más" style = "width:150px; height:225px;"/>
-                                                </a>
-                                                <div class = "caption">
-                                                    <h5>El senor de los anillos</h5>
-                                                    <h4><a class = "btn" href = "#"> Ver</a>
-                                                        <span class = "pull-right">$250</span>
-                                                    </h4>
-                                                </div>
+                                    <div class = "col-md-4">
+                                        <div class = "thumbnail">
+                                            <a href = "#"><img src = "img/Digital Image Processing.jpg" alt = "Compra más" style = "width:150px; height:225px;"/>
+                                            </a>
+                                            <div class = "caption">
+                                                <h5>Digital Image Processing</h5>
+                                                <h4><a class = "btn" href = "#"> Ver</a>
+                                                    <span class = "pull-right">$250</span>
+                                                </h4>
                                             </div>
                                         </div>
-                                        <div class = "col-md-4">
-                                            <div class = "thumbnail">
+                                    </div>
+                                    <div class = "col-md-4">
+                                        <div class = "thumbnail">
+                                            <a href = "#"><img src = "img/Alicia en el pais de las maravillas.jpg" alt = "Compra más" style = "width:150px; height:225px;"/>
+                                            </a>
+                                            <div class = "caption">
+                                                <h5>Alicia en el pais de las maravillas</h5>
+                                                <h4><a class = "btn" href = "#"> Ver</a>
+                                                    <span class = "pull-right">$250</span>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                                                <a href = "#"><img src = "img/Historia de dos ciudades.jpg" alt = "Compra más" style = "width:150px; height:225px;"/>
-                                                </a>
-                                                <div class = "caption">
-                                                    <h5>Historia de dos ciudades</h5>
-                                                    <h4><a class = "btn" href = "#"> Ver</a>
-                                                        <span class = "pull-right">$250</span>
-                                                    </h4>
-                                                </div>
+                                </div>
+                            </div>
+                            <div class = "item">
+                                <div class = "row">
+                                    <div class = "col-md-4">
+                                        <div class = "thumbnail">
+
+                                            <a href = "#"><img src = "img/El senor de los anillos.jpg" alt = "Compra más" style = "width:150px; height:225px;"/>
+                                            </a>
+                                            <div class = "caption">
+                                                <h5>El senor de los anillos</h5>
+                                                <h4><a class = "btn" href = "#"> Ver</a>
+                                                    <span class = "pull-right">$250</span>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class = "col-md-4">
+                                        <div class = "thumbnail">
+
+                                            <a href = "#"><img src = "img/Historia de dos ciudades.jpg" alt = "Compra más" style = "width:150px; height:225px;"/>
+                                            </a>
+                                            <div class = "caption">
+                                                <h5>Historia de dos ciudades</h5>
+                                                <h4><a class = "btn" href = "#"> Ver</a>
+                                                    <span class = "pull-right">$250</span>
+                                                </h4>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <a data-slide="prev" href="#media" class="left carousel-control">‹</a>
-                        <a data-slide="next" href="#media" class="right carousel-control">›</a>
                     </div>
+                    <a data-slide="prev" href="#media" class="left carousel-control">‹</a>
+                    <a data-slide="next" href="#media" class="right carousel-control">›</a>
                 </div>
             </div>
         </div>
         </div>
-</center>
+
 
         <br/><br/><br/>
         <!--Catálogo de libros -->
-        
+        <form action="ComprarU.jsp">
             <div class="container">
                 <div class="row">
                     <!-- BEGIN PRODUCTS -->
@@ -252,7 +241,7 @@
                     <%
                         }
                     %>
-
+                        
                     <!-- END PRODUCTS -->
                 </div>
             </div>
